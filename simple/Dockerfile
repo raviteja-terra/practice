@@ -11,4 +11,4 @@ COPY simple/hello.sh .
 RUN chmod +x hello.sh
 
 # Set the default command to run the script
-CMD ["./simple/hello.sh"]
+CMD ["./hello.sh"]
