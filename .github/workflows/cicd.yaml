@@ -31,7 +31,6 @@ jobs:
       - name: Build and Push Docker image
         run: |
           docker build -t ravitejareddybora/practice/simple:latest -f Dockerfile .
-          docker push ravitejareddybora/practice/simple:latest
-          docker rmi ravitejareddybora/practice/simple:latest
-      # Push the Docker image to Docker Hub
-     #
+      - name: Push Docker image
+        run: |
+          docker push ravitejareddybora/practice/simple
