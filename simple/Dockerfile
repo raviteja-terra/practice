@@ -5,7 +5,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Copy the script into the container
-COPY hello.sh .
+COPY simple/hello.sh .
 
 # Make the script executable
 RUN chmod +x hello.sh
