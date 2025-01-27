@@ -28,9 +28,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       # Build the Docker image
-      - name: Build and Push Docker image
+      - name: Build Docker Image
         run: |
           docker build -t ravitejareddybora/practice/simple:${{ github.run_id }} -f Dockerfile .
-      - name: Push Docker image
+
+      # Push the Docker image
+      - name: Push Docker Image
         run: |
           docker push ravitejareddybora/practice/simple:${{ github.run_id }}
+          
