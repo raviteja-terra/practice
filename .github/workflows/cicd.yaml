@@ -30,6 +30,7 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
+          sudo -i
           docker build -t raviteja-terra/simple:latest .
 
       # Push the Docker image to Docker Hub
