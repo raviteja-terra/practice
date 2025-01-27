@@ -30,9 +30,9 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/raviteja-terra/simple:latest .
+          docker build -t raviteja-terra/practice/simple:latest .
 
       # Push the Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push ghcr.io/raviteja-terra/simple:latest
+          docker push ghcr.io/raviteja-terra/practice/simple:latest
