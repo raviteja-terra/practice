@@ -30,7 +30,7 @@ jobs:
       # Build the Docker image
       - name: Build and Push Docker image
         run: |
-          docker build -t ravitejareddybora/practice/simple:latest -f simple/Dockerfile .
+          docker build -t ravitejareddybora/practice/simple:latest -f Dockerfile .
           docker push ravitejareddybora/practice/simple:latest
           docker rmi ravitejareddybora/practice/simple:latest
       # Push the Docker image to Docker Hub
