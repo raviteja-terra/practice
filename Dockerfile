@@ -8,7 +8,7 @@ WORKDIR /app
 COPY simple/hello.sh .
 
 # Make the script executable
-RUN chmod +x simple/hello.sh
+RUN chmod +x hello.sh
 
 # Set the default command to run the script
 CMD ["./hello.sh"]
