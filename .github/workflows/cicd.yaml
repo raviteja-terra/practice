@@ -36,10 +36,10 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ravitejareddybora/practice/simple:${{ github.run_id }}
-            ravitejareddybora/practice/simple:latest
+            ravitejareddybora/practice:${{ github.run_id }}
+            ravitejareddybora/practice:latest
 
       # Optional: Remove local Docker images to free up space on the runner
       - name: Cleanup Docker Images
         run: |
-          docker rmi -f ravitejareddybora/practice/simple:${{ github.run_id }}
+          docker rmi -f ravitejareddybora/practice:${{ github.run_id }}
