@@ -30,7 +30,7 @@ jobs:
       # Build the Docker image
       - name: Build and Push Docker image
         run: |
-          docker build -t ravitejareddybora/practice/simple:${{ github.run_id }}-f Dockerfile .
+          docker build -t ravitejareddybora/practice/simple:${{ github.run_id }} -f Dockerfile .
       - name: Push Docker image
         run: |
           docker push ravitejareddybora/practice/simple:${{ github.run_id }}
