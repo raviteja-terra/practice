@@ -27,6 +27,7 @@ jobs:
       # Build the Docker image
       - name: Build Docker Image
         run: |
+          echo "${{ secrets.DOCKER_USERNAME }}"
           docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/practice:${{ github.run_id }} -t ${{ secrets.DOCKER_USERNAME}}/practice:latest .
 
       # Push the Docker image
