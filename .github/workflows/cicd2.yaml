@@ -28,10 +28,10 @@ jobs:
       - name: Build Docker Image
         run: |
           echo "${{ secrets.DOCKER_USERNAME }}"
-          docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/practice:${{ github.run_id }} -t ${{ secrets.DOCKER_USERNAME}}/practice:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/practice:${{ github.run_id }} -t ${{ secrets.DOCKER_USERNAME}}/practice:latest .
 
       # Push the Docker image
       - name: Push Docker Image
         run: |
-          docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/practice:${{ github.run_id }}
-          docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/practice:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/practice:${{ github.run_id }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/practice:latest
