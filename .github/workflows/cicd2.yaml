@@ -17,11 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Set up Docker CLI
-      - name: Set up Docker CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
+      # Se
 
       # Log in to GitHub Container Registry
       - name: Log in to GitHub Container Registry
