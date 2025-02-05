@@ -31,7 +31,7 @@ jobs:
       # Build and push Docker image
       - name: Build and Push Docker Image
         run: |
-          docker build -t ravitejareddybora/practice:${{ github.run_id }} .
+          docker build -t ravitejareddybora/practice:${{ github.run_id }} -t ravitejareddybora/practice:latest .
           docker login -u ravitejareddybora -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push ravitejareddybora/practice:latest
 
