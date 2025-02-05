@@ -30,14 +30,10 @@ jobs:
 
       # Build and push Docker image
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: Dockerfile
-          push: true
-          tags: |
-            ravitejareddybora/practice:${{ github.run_id }}
-            ravitejareddybora/practice:latest
+        run: |
+          docker build -t ravitejareddybora/practice:${{ github.run_id }}
+          docker login -u ravitejareddybora -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push ravitejareddybora/practice:latest
 
       # Optional: Remove local Docker images to free up space on the runner
       - name: Cleanup Docker Images
